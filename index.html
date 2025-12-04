@@ -20,12 +20,16 @@
             transform: scale(1.05);
             box-shadow: 0 0 20px rgba(74, 222, 128, 0.9);
         }
-        /* Specific styling for the Discord button to transition to brand colors */
-        .discord-btn:hover {
-            background-color: #5865F2; /* Discord Blurple on hover */
+        /* Specific styling for the Signal button to transition to brand colors */
+        .signal-btn {
+             transition: all 0.3s ease;
+             /* Initial state to be consistent with other buttons or a subtle shade */
+        }
+        .signal-btn:hover {
+            background-color: #3A8108; /* Signal Brand Green on hover - a deeper shade */
             color: white;
-            border-color: #5865F2;
-            box-shadow: 0 0 30px rgba(88, 101, 242, 0.6); /* Purple Glow */
+            border-color: #3A8108;
+            box-shadow: 0 0 30px rgba(58, 129, 8, 0.6); /* Signal Green Glow */
         }
         .section-padding {
             padding: 5rem 1rem;
@@ -57,7 +61,8 @@
                         'main-text': '#E5E7EB',     /* Light Gray - Primary Text */
                         'accent': '#4ADE80',        /* Sharp Neon Green - CTA/Highlight */
                         'secondary-bg': '#1F2937',  /* Dark Gray - Section/Card BG */
-                        'discord': '#5865F2',       /* Discord Brand Color */
+                        'signal': '#3EB049',        /* Signal Brand Color (Primary Green) */
+                        'signal-dark': '#3A8108',   /* Darker Signal for hover/accents */
                     }
                 }
             }
@@ -75,7 +80,7 @@
                 <a href="#about" class="text-main-text hover:text-accent transition duration-300">The Fight</a>
                 <a href="#evidence" class="text-main-text hover:text-accent transition duration-300">Evidence</a>
                 <a href="#pillars" class="text-main-text hover:text-accent transition duration-300">Our Pillars</a>
-                <a href="#discord-invite" class="text-main-text hover:text-accent transition duration-300">Join Channels</a>
+                <a href="#signal-invite" class="text-main-text hover:text-accent transition duration-300">Join Channels</a>
             </div>
             <button class="md:hidden text-main-text hover:text-accent focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -92,7 +97,7 @@
                 <p class="text-2xl text-gray-400 mb-10 max-w-3xl mx-auto italic font-light">
                     "Predetermined Class is not your destiny." Don't be a slave to the rich who exploit our home.
                 </p>
-                <a href="#discord-invite" class="cta-button inline-block bg-accent text-gray-900 font-extrabold py-4 px-12 rounded-xl text-xl transition duration-300 uppercase tracking-wider">
+                <a href="#signal-invite" class="cta-button inline-block bg-accent text-gray-900 font-extrabold py-4 px-12 rounded-xl text-xl transition duration-300 uppercase tracking-wider">
                     Join the GSC Today &rarr;
                 </a>
             </div>
@@ -238,27 +243,27 @@
                     <div class="dark-card p-8 rounded-xl shadow-xl">
                         <div class="text-5xl font-extrabold mb-3 text-accent">1</div>
                         <h3 class="text-2xl font-semibold mb-4 uppercase">Join The Server</h3>
-                        <p class="text-gray-400">Enter our public Discord channel. This is the staging area for all potential comrades.</p>
+                        <p class="text-gray-400">Enter our public Signal chat. This is the staging area for all potential comrades.</p>
                     </div>
 
                     <div class="dark-card p-8 rounded-xl shadow-xl">
                         <div class="text-5xl font-extrabold mb-3 text-accent">2</div>
                         <h3 class="text-2xl font-semibold mb-4 uppercase">Verification</h3>
-                        <p class="text-gray-400">Complete the bot verification to prove you are human. Read the manifesto pinned in #rules.</p>
+                        <p class="text-gray-400">Complete the vetting steps pinned in the rules channel. Read the manifesto.</p>
                     </div>
 
                     <div class="dark-card p-8 rounded-xl shadow-xl">
                         <div class="text-5xl font-extrabold mb-3 text-accent">3</div>
                         <h3 class="text-2xl font-semibold mb-4 uppercase">Open A Ticket</h3>
-                        <p class="text-gray-400">To gain full access, open a vetting ticket. An established member will interview you.</p>
+                        <p class="text-gray-400">To gain full access, open a vetting ticket (by private message). An established member will interview you.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="discord-invite" class="section-padding bg-main-bg border-t border-gray-700 relative overflow-hidden">
+        <section id="signal-invite" class="section-padding bg-main-bg border-t border-gray-700 relative overflow-hidden">
             <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-accent opacity-5 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-discord opacity-10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-signal opacity-10 rounded-full blur-3xl"></div>
 
             <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                 <div class="space-y-8">
@@ -271,22 +276,22 @@
                             <span class="text-accent font-mono text-sm tracking-widest uppercase">Secure Comms Online</span>
                         </div>
                         <h2 class="text-5xl md:text-6xl font-extrabold text-white leading-tight">
-                            ENTER THE <br> <span class="text-discord">NETWORK</span>
+                            ENTER THE <br> <span class="text-signal">NETWORK</span>
                         </h2>
                     </div>
                     
                     <p class="text-xl text-gray-400 font-light leading-relaxed">
-                        We organize in the shadows to act in the light. Discord is our primary hub for education, vetting, and coordination. 
+                        We organize in the shadows to act in the light. Signal is our primary hub for education, vetting, and coordination. 
                         <br><br>
-                        <span class="text-white font-semibold">Important:</span> Upon joining, you will be in a read-only quarantine zone. You must navigate to the <span class="text-accent font-mono">#start-here</span> channel to begin your integration.
+                        <span class="text-white font-semibold">Important:</span> Upon joining, you will be in a read-only quarantine zone. You must navigate to the <span class="text-accent font-mono">#start-here</span> channel/info to begin your integration.
                     </p>
 
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="https://discord.gg/uupFMg3sdq" target="_blank" class="cta-button discord-btn flex items-center justify-center bg-accent text-gray-900 font-bold py-4 px-8 rounded-xl text-lg w-full sm:w-auto">
+                        <a href="https://signal.group/#CjQKILNU8EJFcwlyMY8m0jSNZmYxobcMNKLeo5Y7hQqyoedvEhAsFyN5nsWJOIZ29assrpfq" target="_blank" class="cta-button signal-btn flex items-center justify-center bg-accent text-gray-900 font-bold py-4 px-8 rounded-xl text-lg w-full sm:w-auto">
                             <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.772-.6083 1.1588a18.2915 18.2915 0 00-7.4841 0c-.1636-.3868-.3973-.7835-.6128-1.1588a.0734.0734 0 00-.0785-.0371 19.718 19.718 0 00-4.8852 1.515.0696.0696 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419z"/>
+                                <path d="M12 2C6.477 2 2 6.477 2 12c0 1.944.557 3.753 1.523 5.318L2 22l4.897-1.503A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm1 14H8v-2h5v2zm3-3H8v-2h8v2z"/>
                             </svg>
-                            Join Server
+                            Join Chat
                         </a>
                         <span class="text-gray-500 text-sm flex items-center">
                              Requires Verification
@@ -294,15 +299,15 @@
                     </div>
                 </div>
 
-                <div class="dark-card border-2 border-discord p-8 rounded-2xl relative transform hover:scale-[1.02] transition duration-500 shadow-2xl shadow-discord/20">
-                    <div class="absolute top-4 right-4 text-discord animate-pulse">
+                <div class="dark-card border-2 border-signal p-8 rounded-2xl relative transform hover:scale-[1.02] transition duration-500 shadow-2xl shadow-signal/20">
+                    <div class="absolute top-4 right-4 text-signal animate-pulse">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
                     </div>
                     
                     <div class="flex items-center space-x-4 mb-6">
-                        <div class="w-16 h-16 bg-discord rounded-full flex items-center justify-center">
-                            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.772-.6083 1.1588a18.2915 18.2915 0 00-7.4841 0c-.1636-.3868-.3973-.7835-.6128-1.1588a.0734.0734 0 00-.0785-.0371 19.718 19.718 0 00-4.8852 1.515.0696.0696 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419z"/>
+                        <div class="w-16 h-16 bg-signal rounded-full flex items-center justify-center">
+                            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.477 2 2 6.477 2 12c0 1.944.557 3.753 1.523 5.318L2 22l4.897-1.503A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm1 14H8v-2h5v2zm3-3H8v-2h8v2z"/>
                             </svg>
                         </div>
                         <div>
@@ -336,7 +341,7 @@
                 <p class="text-xl text-gray-400 mb-8 font-light">
                     The time for passive consumption is over. If your principles align with ecological sovereignty and anti-exploitation, your place is with us.
                 </p>
-                <a href="#discord-invite" class="cta-button inline-block bg-accent text-gray-900 font-extrabold py-5 px-16 rounded-xl text-2xl transition duration-300 uppercase tracking-wider">
+                <a href="#signal-invite" class="cta-button inline-block bg-accent text-gray-900 font-extrabold py-5 px-16 rounded-xl text-2xl transition duration-300 uppercase tracking-wider">
                     RISE UP NOW
                 </a>
             </div>
