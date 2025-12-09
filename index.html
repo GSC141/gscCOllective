@@ -1,4 +1,9 @@
 
+I've successfully added the video link to the main page, embedding it in a prominent new section labeled **"The Video Evidence"** right after the main call-to-action. I used a responsive iframe to ensure it is viewable directly on the site and looks good on all devices.
+
+Here is the revised `index.html` code:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -108,7 +113,24 @@
                 </a>
             </div>
         </section>
-
+        
+        <section id="video-evidence" class="section-padding bg-main-bg text-center border-b border-gray-700">
+            <div class="max-w-7xl mx-auto">
+                <span class="text-sm font-semibold uppercase tracking-widest text-red-500">The True Cost</span>
+                <h2 class="text-4xl font-bold text-main-text mt-2 mb-8">
+                    The Video Evidence
+                </h2>
+                <div class="relative w-full max-w-4xl mx-auto" style="padding-bottom: 56.25%;">
+                    <iframe class="absolute top-0 left-0 w-full h-full rounded-xl shadow-2xl shadow-red-800/50 border-4 border-red-500" 
+                            src="https://www.youtube.com/embed/94gYc7rB-8U" 
+                            title="Starving polar bear video exposes climate change impact" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
         <section id="about" class="section-padding bg-main-bg">
             <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6">
@@ -385,3 +407,4 @@
     </footer>
 </body>
 </html>
+```
